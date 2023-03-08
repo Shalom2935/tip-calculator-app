@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background-color:hsl(185, 41%, 84%);
+    color:  hsl(186, 14%, 43%);
+    font-weight: 600;
+    font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media  (min-width: 500px ){
+    .container{
+        width: 55%;
+        height: 450px;
+        margin: auto;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    
+    }
+    .logo{
+        margin: auto;
+    }
+    .content{
+        background-color: white;
+        display: flex;
+        height: 100%;
+        padding: 25px;
+        border-radius: 15px;
+    }
+    .customer-input{
+        width: 50%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        padding: 5px;
+    }
+    .customer-input input{
+        border: none;
+        background-color: hsl(189, 41%, 97%);
+        color:hsl(183, 100%, 15%);
+        border-radius: 4px;
+        height: 40px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .customer-input input:hover{
+        border: solid 2px hsl(185, 41%, 84%);
+    }
+    .customer-input .tip li:hover{
+        background-color: hsl(180, 69%, 70%) ;
+    
+        color:hsl(183, 100%, 15%) ;
+    }
+    
+    .bill{
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        position: relative;
+    }
+    .dollar{
+        position: absolute;
+        left: 15px;
+        top: 40px;
+        z-index: 1;
+    }
+    .bill input{
+        max-width: 90%;
+        text-align: right;
+        padding-right: 15px;
+        font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .tip{
+        width:100%;
+    }
+    .tip ul{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        row-gap: 13px;
+        max-width: 90%;
+        margin-top: 10px;
+    }
+    .tip ul li{
+        height: 40px;
+        width: 31%;
+        text-align: center;
+        color: white;
+        font-weight: 700;
+        font-size:18px;
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 5px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        
+    }
+    .tip ul li input{
+        max-width: 100%;
+        font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-right: 15px;
+        text-align: right;
+        font-size: 18px;
+    }
+    .numb-people{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        position: relative;
+    }
+    .icon-person{
+        position: absolute;
+        left: 15px;
+        top: 40px;
+    }
+    .numb-people input{
+        width: 100%;
+        padding-right: 15px;
+        text-align: right;
+        font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .customer-output{
+        width: 50%;
+        max-height: 100%;
+        background-color:hsl(183, 100%, 15%);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px 30px 30px 30px;
+    }
+    .customer-output .output-info h1{
+        font-size: 15px;
+        font-weight: 400;
+        color: white;
+        word-spacing: 10px;
+    
+    }
+    .customer-output .output-info h3{
+        font-size: 14px;
+    
+    }
+    .output-info{
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .amount, .total{
+        display: flex;
+        justify-content: space-between;
+    }
+    .display-value{
+        display: flex;
+        font-size: 30px;
+        color: hsl(172, 67%, 45%);
+    }
+    .reset{
+        width: 90%;
+        height: 40px;
+        margin:0 auto;
+    }
+    .reset button{
+        width: 100%;
+        height: 100%;
+        background-color: hsl(172, 67%, 45%);
+        border-radius: 5px;
+        border: none;
+        color: hsl(183, 100%, 15%);
+        font-size: 18px;
+        font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 700;
+    }
+    .reset button:hover{
+        background-color:hsl(180, 69%, 70%);
+    }
+}
+@media  (max-width: 499px){
+    *{
+        height: 100%;
+        font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .container{
+        width: 100%;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .logo{
+        margin: auto;
+        height: auto;
+    }
+
+    .content{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        row-gap: 40px;
+        max-height: 100%;
+        border-radius: 15px 15px 0 0;
+        padding: 25px;
+       
+    }
+    .customer-input{
+        width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .customer-input input{
+        border: none;
+        background-color: hsl(189, 41%, 97%);
+        font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color:hsl(183, 100%, 15%);
+        border-radius: 4px;
+        height: 50px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .customer-input input:hover{
+        border: solid 2px hsl(185, 41%, 84%);
+    }
+    .customer-input .tip li:hover{
+        background-color: hsl(180, 69%, 70%) ;
+    
+        color:hsl(183, 100%, 15%) ;
+    }
+    .bill{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        position: relative;
+    }
+    .bill label{
+        height: auto;
+    }
+    .dollar{
+        height: auto;
+        position: absolute;
+        left: 15px;
+        top: 45px;
+        z-index: 1;
+    }
+    .bill input{
+        max-width: 100%;
+        text-align: right;
+        padding-right: 15px;
+        font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .tip{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .tip p{
+        height: auto;
+    }
+    .tip ul{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        row-gap: 18px;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+    .tip ul li{
+        height: 60px;
+        width: 47%;
+        text-align: center;
+        color: white;
+        font-weight: 700;
+        font-size:18px;
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 5px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        
+        
+    }
+    .tip ul li input{
+        max-width: 100%;
+        height: 100%;
+        font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-right: 15px;
+        text-align: right;
+        font-size: 18px;
+    }
+    .numb-people{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        position: relative;
+    }
+    .numb-people label{
+        height: auto;
+    }
+    .icon-person{
+        position: absolute;
+        left: 15px;
+        top: 45px;
+    }
+    .numb-people input{
+        max-width: 100%;
+        padding-right: 15px;
+        text-align: right;
+        font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .customer-output{
+        max-width: 100%;
+        background-color:hsl(183, 100%, 15%);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px 20px 20px 20px;
+    }
+    .customer-output .output-info h1{
+        font-size: 15px;
+        font-weight: 400;
+        color: white;
+        word-spacing: 10px;
+    
+    }
+    .output-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .customer-output .output-info h3{
+        font-size: 14px;
+    
+    }
+    .output-info{
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 10px;
+    }
+    .amount, .total{
+        display: flex;
+        justify-content: space-between;
+    }
+    .display-value{
+        display: flex;
+        font-size: 30px;
+        color: hsl(172, 67%, 45%);
+        position: relative;
+    }
+    .display-icon{
+        position: absolute;
+        top: 15px;
+        left: -15px;
+    }
+    .reset{
+        width: 90%;
+        height: 40px;
+        margin:0 auto;
+    }
+    .reset button{
+        width: 100%;
+        height: 100%;
+        background-color: hsl(172, 67%, 45%);
+        border-radius: 5px;
+        border: none;
+        color: hsl(183, 100%, 15%);
+        font-size: 18px;
+        font-family: 'Space Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 700;
+    }
+    .reset button:hover{
+        background-color:hsl(180, 69%, 70%);
+    }
+}
